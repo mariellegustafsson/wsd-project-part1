@@ -1,0 +1,15 @@
+<% layout("./layouts/layout.eta") %>
+
+<% if (it.listAmount == 0) { %>
+
+<h2>No shopping lists yet. </h2>
+
+<% } else { %>
+
+<h2>Number of lists</h2>
+<p> Shopping lists:  <%= it.listAmount%> </p>
+<p> Number of items:  <%= it.itemAmount%> </p> 
+
+<% } %>
+
+
