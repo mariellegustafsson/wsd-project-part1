@@ -1,4 +1,6 @@
 import { renderFile } from "https://deno.land/x/eta@v2.2.0/mod.ts";
+//import { renderFile } from "../deps.js"
+
 import * as listService from "../services/listService.js";
 
 const responseDetails = {
@@ -38,9 +40,10 @@ const viewSpecificList = async (request) => {
     const data = {
       items: await listService.findItems(urlParts[2]),
       collectedItems: await listService.findCollectedItems(urlParts[2]),
-      shoppingListId: urlParts[2]
+      shoppingListId: urlParts[2],
+      name: await listService.getListName(urlParts[2]),
     };
-    
+    console.log(data.name);
 
   
   
