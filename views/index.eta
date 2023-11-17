@@ -8,7 +8,7 @@
 
 <h2>Number of lists</h2>
 <p> Shopping lists: <%= it.listAmount%> </p>
-<p> Number of items: <%= it.itemAmount%> </p> 
+<p> Shopping list items: <%= it.itemAmount%> </p> 
 
 <% } %>
 
