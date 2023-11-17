@@ -3,6 +3,8 @@
 <a href="/lists">Shopping lists</a>
 <h2>Insert an item into the list</h2>
 
+<h2> <%= it.name%> </h2>
+
 
 <form method="POST" action="/lists/<%= it.shoppingListId %>/items" >
   <input type="text" name="name" />
@@ -26,8 +28,6 @@
 
 </li>
 <% }); %>
-
-
 
 
 
