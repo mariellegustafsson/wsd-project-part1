@@ -17,6 +17,13 @@ const listShoppingLists = async () => {
       return rows
     
   };
+
+  const getListName = async (Id) => {
+    const ID = Number(Id);
+    const rows = await sql`SELECT name FROM shopping_lists WHERE id = ${ ID };`;
+      return rows[0].name
+
+  };
   /*
     if (rows && rows.length > 0) {
       return rows;
@@ -67,4 +74,4 @@ const listShoppingLists = async () => {
  
  };
 
-export { create, listShoppingLists, createListEntry, findItems, collect, findCollectedItems, deactivateList, count, countItems };
+export { create, listShoppingLists, createListEntry, findItems, collect, findCollectedItems, deactivateList, count, countItems, getListName };
